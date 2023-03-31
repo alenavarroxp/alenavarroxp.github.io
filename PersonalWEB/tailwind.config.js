@@ -10,12 +10,12 @@ module.exports = {
     },
     extend: {
       animation: {
-        'typing': 'typing 5s steps(30), blink .5s step-end alternate',
+        'typing': 'typing 5s steps(30,end), blink .5s step-end alternate',
       },
       keyframes: {
         typing: {
-          'from': { width: '0' },
-          'to': { width: '100%' },
+          'from': { width: '100%' },
+          'to': { width: '0' },
         }
       }
     },

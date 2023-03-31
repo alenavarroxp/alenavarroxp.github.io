@@ -43,6 +43,11 @@ function NavBar() {
             
         <Navigation/>
         <MenuToggle toggle={()=> setIsOpen()}/>
+        <div className='absolute bottom-0 left-0 right-0 text-center'>
+            <p className=''>Alejandro Navarro</p>
+            <p className='text-sm mb-3'>© 2023 Todos los derechos reservados</p>
+            
+        </div>
         </motion.div>
     </motion.nav>
      )
