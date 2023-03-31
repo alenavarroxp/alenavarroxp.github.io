@@ -10,7 +10,13 @@ module.exports = {
     },
     extend: {
       animation: {
-        'spin-slow': 'spin 3s linear infinite',
+        'typing': 'typing 5s steps(30), blink .5s step-end alternate',
+      },
+      keyframes: {
+        typing: {
+          'from': { width: '0' },
+          'to': { width: '100%' },
+        }
       }
     },
   },

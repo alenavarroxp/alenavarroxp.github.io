@@ -39,7 +39,7 @@ function NavBar() {
         className='absolute top-0 bottom-0 left-0 w-[20px]'
     >
        
-        <motion.div className='absolute top-0 bottom-0 left-0 w-[300px] bg-gray-500' variants={sidebar}>
+        <motion.div className='absolute top-0 bottom-0 left-0 w-[300px] bg-gray-50' variants={sidebar}>
             
         <Navigation/>
         <MenuToggle toggle={()=> setIsOpen()}/>
