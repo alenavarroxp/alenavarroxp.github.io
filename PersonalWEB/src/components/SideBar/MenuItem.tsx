@@ -4,7 +4,7 @@ import { ImUser } from "react-icons/im";
 import { IoSchool } from "react-icons/io5";
 import { MdWork, MdAlternateEmail } from "react-icons/md";
 import { FaFileCode } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import 'animate.css';
 import {TfiEmail} from 'react-icons/tfi'
 
@@ -30,7 +30,17 @@ export const MenuItem = ({ i }:any) => {
   const info = ["Sobre mí","Educacion","Experiencia","Proyectos","Contacto"]
   const icons = [<ImUser size={iconSize}/>,<IoSchool size={iconSize}/>,<MdWork size={iconSize}/>,<FaFileCode size={iconSize}/>,<TfiEmail size={iconSize}/>]
   const [hover, setHover] = useState(false);
-
+  function comprobar(i:number){
+    switch(i){
+      case 0: return "sobre-mi";
+      case 1: return "/";
+      case 2: return "experiencia";
+      case 3: return "proyectos";
+      case 4: return "contacto";
+      default: return "/"
+    }
+    
+  }
   return (
     <motion.li
       variants={variants}
@@ -47,7 +57,7 @@ export const MenuItem = ({ i }:any) => {
         {icons[i]}
       </motion.div>
       <div className="flex h-[20px] relative w-[200px] rounded-md items-center">
-        <a>{info[i]}</a>
+        <a href={comprobar(i)}>{info[i]}</a>
       </div>
       
     </motion.li>

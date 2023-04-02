@@ -22,7 +22,7 @@ function Home() {
 
 
   return (
-    <div className='top-0 h-screen bottom-0 flex justify-center items-center bg-blue-'>
+    <div className='top-0 h-screen bottom-0 flex justify-center items-center'>
       <p className="text-3xl font-bold text-white">Soy</p>
       <SwitchTransition>
         <CSSTransition classNames={"slide-up"} key={arrayOfWords[paragraphCounter]} addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}>

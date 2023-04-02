@@ -5,10 +5,11 @@ import {IoSchool} from "react-icons/io5"
 import {MdWork} from "react-icons/md"
 import { motion, useCycle } from 'framer-motion';
 import { useDimensions } from './use-dimensions';
-import { Navigation } from './Navigation';
 import { MenuToggle } from './MenuToggle';
-function NavBar() {
-    const [isOpen,setIsOpen] = useCycle(false,true);
+import { Navigation } from './Navigation';
+
+
+function NavBar({isOpen,setIsOpen}:any) {
     const containerRef = useRef(null);
     const {height} = useDimensions(containerRef);
     const sidebar = {
@@ -30,19 +31,20 @@ function NavBar() {
           }
         }
       };
+      
   return (
     <motion.nav
         initial = {false}
         animate = {isOpen ? "open":"close"}
         custom = {height}
         ref = {containerRef} 
-        className='absolute top-0 bottom-0 left-0 w-[20px]'
+        className='fixed top-0 bottom-0 left-0 w-[20px]'
     >
        
         <motion.div className='absolute top-0 bottom-0 left-0 w-[300px] bg-gray-50' variants={sidebar}>
             
         <Navigation/>
-        <MenuToggle toggle={()=> setIsOpen()}/>
+        <MenuToggle toggle={()=> setIsOpen(!isOpen)}/>
         <div className='absolute bottom-0 left-0 right-0 text-center'>
             <p className=''>Alejandro Navarro</p>
             <p className='text-sm mb-3'>© 2023 Todos los derechos reservados</p>
