@@ -5,6 +5,7 @@ import './About.css'
 import { Link } from 'react-router-dom';
 import Photo from '../../images/PersonalPhoto.jpg'
 import {MdVerified} from 'react-icons/md'
+import FAQ from '../FAQ/FAQ';
 
 function About() {
   const ref = useRef(null);
@@ -12,6 +13,7 @@ function About() {
   const [visibleBubble,setVisibleBubble] = useState(false)
   const arrayOfWords = ['Alejandro Navarro','Ingeniero Informático','Profesional','Desarrollador software','Creativo']
   const  [paragraph, setParagraph] = useState('')
+  const [visible,setVisible] = useState(false)
   const [paragraphCounter, setParagraphCounter] = useState(0)
   const [time,setTime] = useState(3500)
   const [clock, setClock] = useState(new Date());
@@ -101,14 +103,27 @@ function About() {
           animate={{opacity:1}} transition={{duration:0.5}} className="chat chat-start absolute w-56 right-14 ">
         <div className='chat-header text-gray-300 flex items-center'>Alejandro Navarro <MdVerified  size={12} style={{marginLeft:3}} color='#00B2FF'/>
         </div>
-        <div className="chat-bubble bg-cyan-500 text-white ">Hola! <br/> Este soy yo 😉</div>
+        <div className="chat-bubble bg-[#02bff4] text-white ">Hola! <br/> Este soy yo 😉</div>
         <time className="text-xs opacity-100 ml-[105px] chat-footer text-gray-300">{formatTime(clock)}</time>
      </motion.div>}
     
   </div>
+ 
+ {/* <div className='w-[60%]'>
+    <motion.button className='bg-gray-500 w-full h-16 rounded-3xl rounded-b-none flex items-center' onClick={()=> setVisible(!visible)}>
+      <h3 className='text-gray-200 items-center w-fit ml-6 '>
+        ¿Con que lenguajes has hecho esta página web?
+      </h3>
+    </motion.button>
+    {visible&&<motion.div initial={{opacity:0,y:-50}} animate={{opacity:1,y:0}} exit={{opacity:0,y:-50}} className=' bg-gray-200 h-48'>
+      hola
+    </motion.div>}
+  </div> */}
+  <FAQ/>
 
+  
 </div>
-  )
+)
 }
 
 export default About

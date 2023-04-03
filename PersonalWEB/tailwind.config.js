@@ -2,7 +2,8 @@
 module.exports = {
   content: [
     "./index.html",
-    "./src/**/*.{html,js,ts,tsx,jsx}"
+    "./src/**/*.{html,js,ts,tsx,jsx}",
+    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}"
   ],
   theme: {
     fontFamily:{
@@ -20,7 +21,9 @@ module.exports = {
       }
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [
+    require("daisyui"),
+    require("flowbite/plugin")],
   daisyui: {
     styled: true,
     themes: true,
