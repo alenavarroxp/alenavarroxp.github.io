@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
@@ -11,6 +11,9 @@ import { Transition, TransitionGroup } from 'react-transition-group';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
+  useEffect(()=>{
+    console.log(isOpen)
+  },[isOpen])
   return (
     <BrowserRouter>
       <div className="App bg-[#3A3F46] h-screen w-screen">

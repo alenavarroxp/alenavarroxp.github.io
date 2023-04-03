@@ -7,6 +7,7 @@ import { FaFileCode } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import 'animate.css';
 import {TfiEmail} from 'react-icons/tfi'
+import { Link } from "react-router-dom";
 
 const variants = {
   open: {
@@ -57,7 +58,9 @@ export const MenuItem = ({ i }:any) => {
         {icons[i]}
       </motion.div>
       <div className="flex h-[20px] relative w-[200px] rounded-md items-center">
-        <a href={comprobar(i)}>{info[i]}</a>
+        <Link to={comprobar(i)}>
+        <a>{info[i]}</a>
+        </Link>
       </div>
       
     </motion.li>

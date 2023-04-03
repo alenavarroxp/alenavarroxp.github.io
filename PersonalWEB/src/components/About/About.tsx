@@ -30,7 +30,7 @@ function About() {
             variants={variants}
             transition={{duration:3}}
             key={location.key}
-            className=' h-screen'>
+            className=' top-0 h-screen bottom-0 flex justify-center items-center text-white '>
 
         ABout
         </motion.div>
