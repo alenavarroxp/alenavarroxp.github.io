@@ -34,7 +34,7 @@ export const MenuItem = ({ i }:any) => {
   function comprobar(i:number){
     switch(i){
       case 0: return "sobre-mi";
-      case 1: return "/";
+      case 1: return "educacion";
       case 2: return "experiencia";
       case 3: return "proyectos";
       case 4: return "contacto";

@@ -1,7 +1,7 @@
 import { animate, easeOut, motion } from 'framer-motion'
 import {CSSTransition, SwitchTransition} from 'react-transition-group'
 import React, { useEffect, useState } from 'react'
-import './Home.css'
+import '../About/About.css'
 
 function Home() {
   const arrayOfWords = ['Alejandro Navarro','Ingeniero Informático','Profesional','Desarrollador software','Creativo']

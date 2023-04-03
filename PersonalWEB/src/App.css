@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @keyframes escribir {
   from { width: 100% }
   to { width:0 }
