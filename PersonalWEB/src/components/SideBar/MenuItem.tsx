@@ -52,16 +52,16 @@ export const MenuItem = ({ i }:any) => {
       className="p-0 list-none mb-[20px] flex items-center cursor-pointer"
       
     >
-  {hover &&<motion.div className="absolute w-[272px] h-[40px] place-content-start bg-cyan-200" initial={{x:-290}} animate={{ x: 0 }}
-  transition={{ ease: "easeInOut", duration: 0.3 }}/>}
+  {hover &&<motion.div className="absolute w-[272px] h-[40px] place-content-start bg-[#00c8ff]" initial={{x:-290}} animate={{ x: 0 }}
+  transition={{ ease: "easeInOut", duration: 0.3 }}><Link to={comprobar(i)} className="relative bg-red-700"/></motion.div>}
       <motion.div className="w-[40px] relative h-[40px] rounded-full flex mr-[8px] m-auto items-center ">
         {icons[i]}
       </motion.div>
-      <div className="flex h-[20px] relative w-[200px] rounded-md items-center">
-        <Link to={comprobar(i)}>
-        <a>{info[i]}</a>
-        </Link>
-      </div>
+      <Link to={comprobar(i)}>
+        <div className="flex h-[20px] relative w-[200px] rounded-md items-center">
+          <a>{info[i]}</a>
+        </div>
+      </Link>
       
     </motion.li>
   );

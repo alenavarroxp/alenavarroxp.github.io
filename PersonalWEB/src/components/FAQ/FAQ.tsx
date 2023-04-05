@@ -2,6 +2,8 @@ import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import {MdKeyboardArrowDown} from 'react-icons/md'
 import ReorderLanguages from './Reordered/ReorderLanguages';
+import Year from './Year/Year';
+import Mencion from './Mencion/Mencion';
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const ref = useRef(null);
@@ -13,14 +15,14 @@ const FAQ = () => {
        <ReorderLanguages/>
     },
     {
-      title: '¿Cómo puedo cambiar mi contraseña?',
+      title: '¿Por qué empezaste a estudiar ingeniería informática?',
       content:
-        'Para cambiar tu contraseña, debes ir a la sección de "Configuración de cuenta" y hacer clic en "Cambiar contraseña". Luego, sigue los pasos que se indican para completar el proceso.',
+        <Year/>,
     },
     {
-      title: '¿Puedo cancelar mi suscripción en cualquier momento?',
+      title: '¿Por qué elegiste la mención de ingeniería de software?',
       content:
-        'Sí, puedes cancelar tu suscripción en cualquier momento. Para hacerlo, ve a la sección de "Configuración de cuenta" y haz clic en "Cancelar suscripción". Si necesitas ayuda, ponte en contacto con nuestro equipo de soporte.',
+        <Mencion/>,
     },
   ];
 
@@ -29,7 +31,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="max-w-3xl">
+    <div className="max-w-3xl -mt-16 ">
         <h1 className='text-white font-bold text-3xl'>Preguntas frecuentes</h1>
         <motion.div 
       animate={{transform:isInView ? "translateX(0px)" : "translateX(-350px)",
@@ -63,10 +65,10 @@ const FAQ = () => {
           {activeIndex === index && (
             <motion.div
               className="p-4 text-white"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
+              initial={{ opacity: 0,scale:0 }}
+              animate={{ opacity: 1,scale:1 }}
+              exit={{ opacity: 0,scale:0 }}
+              transition={{ duration: 0.3 }}
             >
               {panel.content}
             </motion.div>

@@ -30,7 +30,7 @@ export const Item = ({ item,icon}: Props) => {
   return (
     <div>
     <Reorder.Item value={item} id={item} style={{y,margin:10, display:"flex"}} >
-      <div className="mr-1">{comprobar(item)}</div>
+      <div className="mr-1 pointer-events-none">{comprobar(item)}</div>
       <p className="text-xl">{item}</p>
     </Reorder.Item>
     </div>

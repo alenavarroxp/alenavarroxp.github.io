@@ -42,7 +42,6 @@ function About() {
   const formatTime = (date:any) => {
     const hours = date.getHours().toString().padStart(2, '0');
     const minutes = date.getMinutes().toString().padStart(2, '0');
-    
 
     return `${hours}:${minutes}`;
   };
@@ -63,7 +62,7 @@ function About() {
     </motion.div>
   </div>
 
-  <div className='flex justify-between mt-8 flex-row h-[100%]'>
+  <div className='flex  mt-8 flex-row'>
     <div className='text-white text-lg w-[95vm] max-w-[800px] text-justify'>
       <h3 className='mb-3 '>¡Hola! Soy Alejandro Navarro, un estudiante de ingeniería informática dedicado, comprometido,
         creativo y apasionado por aprender y crecer profesionalmente en el desarrollo software.
@@ -82,45 +81,54 @@ function About() {
       </h3>
     </div>
 
-    <div className='p-14 w-[50%]'style={{marginTop: '-5%'}}>
-      <motion.img
-        src={Photo}
-        alt="Not Photo Found"
-        className="m-auto rounded-full"
-        initial={{ opacity: 0, scale: 0.95}}
-        animate={{
-          x: isInView ? '5%' : '80%',
-          opacity: isInView ? 1 : 0,
-        }}
-        transition={{ duration: 0.75}}
-        whileHover={{scale:1.05}}
-        onHoverStart={() => setVisibleBubble(true)}
-        onHoverEnd={() => setVisibleBubble(false)}
-      /> 
-      
-    </div>
-    {visibleBubble && <motion.div initial={{opacity:0}} 
-          animate={{opacity:1}} transition={{duration:0.5}} className="chat chat-start absolute w-56 right-14 ">
+    <div className='p-14 w-[50%] 'style={{marginTop: '-5%'}}>
+    
+    <motion.img
+  src={Photo}
+  alt="Not Photo Found"
+  className={`m-auto rounded-full ring ring-[#02bff4] ring-offset-1 ring-offset-[#02bff4]`}
+  
+  initial={{ opacity: 0, scale: 0}}
+  animate={{
+    
+    opacity: isInView ? 1 : 0,
+    scale:0.95
+  }}
+  transition={{ duration: 0.75}}
+  whileHover={{scale:1.05}}
+  onHoverStart={() => setVisibleBubble(true)}
+  onHoverEnd={() => setVisibleBubble(false)}
+>
+  
+  </motion.img>
+  
+  {visibleBubble && <motion.div initial={{opacity:0}} 
+          animate={{opacity:1}} transition={{duration:0.5}} className="chat chat-start absolute top-16 right-12 w-56  ">
         <div className='chat-header text-gray-300 flex items-center'>Alejandro Navarro <MdVerified  size={12} style={{marginLeft:3}} color='#00B2FF'/>
         </div>
         <div className="chat-bubble bg-[#02bff4] text-white ">Hola! <br/> Este soy yo 😉</div>
         <time className="text-xs opacity-100 ml-[105px] chat-footer text-gray-300">{formatTime(clock)}</time>
      </motion.div>}
+<motion.div className=' text-center mt-3 font-bold  text-white  '
+  initial={{ opacity: 1}}
+  
+  transition={{ duration: 0.75}}>
+    <h1 className='text-2xl tracking-wider'>ALEJANDRO </h1>
+    <h1 className='text-xl'>NAVARRO DE LA CRUZ</h1>
+    
+    <div className='border m-auto w-64 mt-1'/>
+    <h1 className='text-md  mt-2'>Mencion: Ingenieria de Software</h1>
+  </motion.div>
+      
+    </div>
+    
+    
     
   </div>
- 
- {/* <div className='w-[60%]'>
-    <motion.button className='bg-gray-500 w-full h-16 rounded-3xl rounded-b-none flex items-center' onClick={()=> setVisible(!visible)}>
-      <h3 className='text-gray-200 items-center w-fit ml-6 '>
-        ¿Con que lenguajes has hecho esta página web?
-      </h3>
-    </motion.button>
-    {visible&&<motion.div initial={{opacity:0,y:-50}} animate={{opacity:1,y:0}} exit={{opacity:0,y:-50}} className=' bg-gray-200 h-48'>
-      hola
-    </motion.div>}
-  </div> */}
+  
   <FAQ/>
-
+  
+  
   
 </div>
 )
