@@ -15,7 +15,7 @@ function App() {
  
   return (
     <BrowserRouter>
-      <div className="App bg-[#3A3F46] h-screen w-screen">
+      <div className="App relative overflow-hidden bg-[#3A3F46] min-h-screen">
         <NavBar isOpen={isOpen} setIsOpen={setIsOpen}/>
         <AnimatedSwitch/>
       </div>
