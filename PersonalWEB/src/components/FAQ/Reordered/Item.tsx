@@ -28,10 +28,10 @@ export const Item = ({ item,icon}: Props) => {
     return <></>
   }
   return (
-    <div>
-    <Reorder.Item value={item} id={item} style={{y,margin:10, display:"flex"}} >
-      <div className="mr-1 pointer-events-none object-none w-[32px] h-auto">{comprobar(item)}</div>
-      <p className="text-xl">{item}</p>
+    <div className="hidden lg:block md:block md:m-2 md:pr-4 md:pl-4 lg:p-0 lg:m-0 ">
+    <Reorder.Item value={item} id={item} style={{y,margin:10, display:"flex",alignItems:"center"}} >
+      <div className="mr-1 pointer-events-none object-none lg:w-8 md:w-8 h-auto">{comprobar(item)}</div>
+      <p className="lg:text-xl lg:inline-block hidden ">{item}</p>
     </Reorder.Item>
     </div>
   );

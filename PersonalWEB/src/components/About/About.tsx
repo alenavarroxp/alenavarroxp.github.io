@@ -66,7 +66,7 @@ function About() {
       </div>
 
       <div className="flex lg:flex-row mt-8 flex-col">
-      <div className="text-white text-lg  lg:max-w-[70em] text-justify lg:p-0 lg:text-left md:h-fit  lg:mt-0 sm:ml-20 ml-12 md:ml-0 mb-8 max-h-96 h-screen lg:max-h-96 pr-4 lg:pr-0 p-4 lg:ml-0 overflow-y-scroll  pt-0"
+      <div className="text-white text-lg  lg:max-w-[70em] text-justify lg:p-0 lg:text-left md:h-fit  lg:mt-0 sm:ml-20 ml-12 md:ml-0 mb-8 max-h-96 h-screen lg:max-h-96 pr-4 lg:pr-0 p-4 lg:ml-0 overflow-y-auto  pt-0"
         style={{ paddingRight: "2rem" }}>
           <h3 className="mb-3 text-justify">¡Hola! Soy Alejandro Navarro, un estudiante de ingeniería informática dedicado, comprometido, creativo y apasionado por aprender y crecer profesionalmente en el desarrollo software.</h3>
           <h3 className="mb-3 text-justify">Como estudiante, estoy siempre aprendiendo y mejorando mis habilidades para estar al día de las últimas tendencias y tecnologías en el campo de la informática.</h3>
