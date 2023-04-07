@@ -8,3 +8,45 @@
   to { width:0 }
 }
 
+
+.p-timeline .p-timeline-header {
+  height: 72px;
+}
+
+.p-timeline .p-timeline-events {
+  padding-top: 20px;
+}
+
+.p-timeline .p-timeline-event-content {
+  padding-top: 8px;
+}
+
+.p-timeline .p-timeline-event-content .p-timeline-event-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  color: #333;
+}
+
+.p-timeline .p-timeline-event-content .p-timeline-event-desc {
+  font-size: 14px;
+  margin: 8px 0 0 0;
+  color: #888;
+}
+
+.p-timeline .p-timeline-event .p-timeline-event-icon {
+  font-size: 24px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-right: 12px;
+}
+
+.p-timeline .p-timeline-event .p-timeline-event-icon.pi {
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+}
