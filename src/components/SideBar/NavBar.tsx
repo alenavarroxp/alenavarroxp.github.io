@@ -24,7 +24,7 @@ function NavBar({isOpen,setIsOpen}:any) {
         close: {
           clipPath: "circle(30px at 40px 40px)",
           transition: {
-            delay: 0.5,
+            delay: 0.25,
             type: "spring",
             stiffness: 400,
             damping: 40
@@ -41,11 +41,11 @@ function NavBar({isOpen,setIsOpen}:any) {
         className='fixed top-0 bottom-0 left-0 w-[20px]'
     >
        
-        <motion.div className='absolute top-0 bottom-0 left-0 w-[300px] bg-gray-50' variants={sidebar}>
+        <motion.div className='absolute top-0 bottom-0 left-0 w-[300px] bg-gray-50 h-full' variants={sidebar}>
             
         <Navigation/>
         <MenuToggle toggle={()=> setIsOpen(!isOpen)}/>
-        <div className='absolute bottom-0 left-0 right-0 text-center'>
+        <div className='absolute bottom-0 left-0 right-0 text-center text-black'>
             <p className=''>Alejandro Navarro</p>
             <p className='text-sm mb-3'>© 2023 Todos los derechos reservados</p>
             

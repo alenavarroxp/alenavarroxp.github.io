@@ -52,7 +52,8 @@ function About() {
   return (
     <div className='lg:ml-24 md:ml-20 mt-4 '>
       <div className='w-full sm:w-auto relative top-6'>
-        <div className='text-4xl font-bold w-fit text-white flex-row lg:ml-0 md:ml-4 sm:mt-8 sm:ml-24 ml-16 mt-12'>Sobre mi
+        <div className='text-4xl font-bold w-fit text-white flex-row lg:ml-0 md:ml-4 sm:mt-8 sm:ml-24 ml-4 mt-12'>
+          Sobre mi
         <motion.div
           animate={{
             transform: isInView ? "translateX(0)" : "translateX(-10vw)",
@@ -66,7 +67,7 @@ function About() {
       </div>
 
       <div className="flex lg:flex-row mt-8 flex-col">
-      <div className="text-white text-lg  lg:max-w-[70em] text-justify lg:p-0 lg:text-left md:h-fit  lg:mt-0 sm:ml-20 ml-12 md:ml-0 mb-8 max-h-96 h-screen lg:max-h-96 pr-4 lg:pr-0 p-4 lg:ml-0 overflow-y-auto  pt-0"
+      <div className="text-white text-lg  lg:max-w-[70em] text-justify lg:p-0 lg:text-left md:h-fit  lg:mt-0 sm:ml-20 ml-0 md:ml-0 mb-8 max-h-96 h-screen lg:max-h-96 pr-4 lg:pr-0 p-4 lg:ml-0 overflow-y-auto  pt-0"
         style={{ paddingRight: "2rem" }}>
           <h3 className="mb-3 text-justify">¡Hola! Soy Alejandro Navarro, un estudiante de ingeniería informática dedicado, comprometido, creativo y apasionado por aprender y crecer profesionalmente en el desarrollo software.</h3>
           <h3 className="mb-3 text-justify">Como estudiante, estoy siempre aprendiendo y mejorando mis habilidades para estar al día de las últimas tendencias y tecnologías en el campo de la informática.</h3>
@@ -78,7 +79,7 @@ function About() {
   <motion.img
     src={Photo}
     ref={refImage}
-    alt="Not Photo Found"
+    alt="Alejandro Navarro Profile Photo"
     className={`m-auto rounded-full ring ring-[#02bff4] ring-offset-1 ring-offset-[#02bff4]`}
     initial={{ opacity: 0, scale: 0}}
     animate={{opacity: isInViewImage ? 1 : 0, scale:0.95}}
