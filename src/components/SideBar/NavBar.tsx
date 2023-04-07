@@ -1,61 +1,61 @@
-import React, { ReactNode, useRef } from 'react'
-import Image from '../images/PersonalImage.png'
+import React, { ReactNode, useRef } from "react";
+import Image from "../images/PersonalImage.png";
 import { ImUser } from "react-icons/im";
-import {IoSchool} from "react-icons/io5"
-import {MdWork} from "react-icons/md"
-import { motion, useCycle } from 'framer-motion';
-import { useDimensions } from './use-dimensions';
-import { MenuToggle } from './MenuToggle';
-import { Navigation } from './Navigation';
+import { IoSchool } from "react-icons/io5";
+import { MdWork } from "react-icons/md";
+import { motion, useCycle } from "framer-motion";
+import { useDimensions } from "./use-dimensions";
+import { MenuToggle } from "./MenuToggle";
+import { Navigation } from "./Navigation";
 
+function NavBar({ isOpen, setIsOpen }: any) {
+  const containerRef = useRef(null);
+  const { height } = useDimensions(containerRef);
+  const sidebar = {
+    open: (height = 1000) => ({
+      clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+      transition: {
+        type: "spring",
+        stiffness: 20,
+        restDelta: 2,
+      },
+    }),
+    close: {
+      clipPath: "circle(30px at 40px 40px)",
+      transition: {
+        delay: 0.25,
+        type: "spring",
+        stiffness: 400,
+        damping: 40,
+      },
+    },
+  };
 
-function NavBar({isOpen,setIsOpen}:any) {
-    const containerRef = useRef(null);
-    const {height} = useDimensions(containerRef);
-    const sidebar = {
-        open: (height = 1000) => ({
-          clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
-          transition: {
-            type: "spring",
-            stiffness: 20,
-            restDelta: 2
-          }
-        }),
-        close: {
-          clipPath: "circle(30px at 40px 40px)",
-          transition: {
-            delay: 0.25,
-            type: "spring",
-            stiffness: 400,
-            damping: 40
-          }
-        }
-      };
-      
   return (
     <motion.nav
-        initial = {false}
-        animate = {isOpen ? "open":"close"}
-        custom = {height}
-        ref = {containerRef} 
-        className='fixed top-0 bottom-0 left-0 w-[20px]'
+      initial={false}
+      animate={isOpen ? "open" : "close"}
+      custom={height}
+      ref={containerRef}
+      className="fixed top-0 bottom-0 left-0 w-[20px]"
     >
-       
-        <motion.div className='absolute top-0 bottom-0 left-0 w-[300px] bg-gray-50 h-full' variants={sidebar}>
-            
-        <Navigation/>
-        <MenuToggle toggle={()=> setIsOpen(!isOpen)}/>
-        <div className='absolute bottom-0 left-0 right-0 text-center text-black'>
-            <p className=''>Alejandro Navarro</p>
-            <p className='text-sm mb-3'>© 2023 Todos los derechos reservados</p>
-            
+      <motion.div
+        className="absolute top-0 bottom-0 left-0 w-[300px] bg-gray-50 h-full"
+        variants={sidebar}
+      >
+        <Navigation />
+        <MenuToggle toggle={() => setIsOpen(!isOpen)} />
+        <div className="absolute bottom-0 left-0 right-0 text-center text-black">
+          <p className="">Alejandro Navarro</p>
+          <p className="text-sm mb-3">© 2023 Todos los derechos reservados</p>
         </div>
-        </motion.div>
+      </motion.div>
     </motion.nav>
-     )
-    }
+  );
+}
 
-       {/* <aside id="logo-sidebar" className="fixed top-0 left-0  w-72 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+{
+  /* <aside id="logo-sidebar" className="fixed top-0 left-0  w-72 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
    <div className="h-full px-3 py-4 bg-gray-50">
    <img src={Image} className=" sm:h-40 m-auto self-center" alt="PersonalImage" />
       <a href="" className="flex items-center mb-5 m-auto">
@@ -104,8 +104,7 @@ function NavBar({isOpen,setIsOpen}:any) {
          
 
    </div>
-</aside> */}
-    
- 
+</aside> */
+}
 
-export default NavBar
+export default NavBar;
