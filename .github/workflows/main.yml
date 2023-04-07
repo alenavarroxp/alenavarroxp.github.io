@@ -36,6 +36,8 @@ jobs:
           cache: 'yarn'
       - name: Install dependencies
         run: yarn install
+      - name: Refactor code with Prettier
+        run: yarn prettier
       - name: Build
         run: yarn run build
       - name: Setup Pages
