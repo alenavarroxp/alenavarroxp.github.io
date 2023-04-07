@@ -16,23 +16,16 @@ function Year() {
     <div className=''>
     <motion.div className='flex items-center' style={{ textAlign: 'justify' }}>
       <p className='mr-1.5 text-justify'>
-        Empecé a estudiar ingeniería informática en
-      </p>
-      <motion.h1
+        Empecé a estudiar ingeniería informática en {" "}
+     
+      <motion.span
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         style={{ textAlign: 'justify'}}
-        className='text-2xl'
-      >
+        className='text-2xl'>
         {rounded}
-      </motion.h1>
-      <p className='ml-1.5 text-justify'>
-        por mi interés por la tecnología, la informática y
-      </p>
-    </motion.div>
-    <div>
-      <p className='text-justify'>
-            por el papel creciente en la sociedad actual. Además la demanda laboral en
+      </motion.span>
+       {" "}por mi interés por la tecnología, la informática y por el papel creciente en la sociedad actual. Además la demanda laboral en
             este campo, suele ser alta y está en constante crecimiento, lo que me
             posibilita seguir creciendo profesionalmente.<br/> Si quieres saber más sobre mi experiencia pulsa en
             <Link to={"/experiencia"}>
@@ -41,11 +34,9 @@ function Year() {
                     <MdWork size={18} className='ml-1'/>
                 </div>
             </Link>
-        </p>
-    </div>
+      </p>
+    </motion.div>
   </div>
-  
-   
   )
 }
 
