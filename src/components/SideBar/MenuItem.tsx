@@ -54,11 +54,11 @@ export const MenuItem = ({ i }:any) => {
     >
   {hover &&<motion.div className="absolute w-[272px] h-[40px] place-content-start bg-[#00c8ff]" initial={{x:-290}} animate={{ x: 0 }}
   transition={{ ease: "easeInOut", duration: 0.3 }}><Link to={comprobar(i)} className="relative bg-red-700"/></motion.div>}
-      <motion.div className="w-[40px] relative h-[40px] rounded-full flex mr-[8px] m-auto items-center ">
+      <motion.div className="w-[40px] relative h-[40px] rounded-full flex mr-[8px] text-black m-auto items-center ">
         {icons[i]}
       </motion.div>
       <Link to={comprobar(i)}>
-        <div className="flex h-[20px] relative w-[200px] rounded-md items-center">
+        <div className="flex h-[20px] relative w-[200px] text-black rounded-md items-center">
           <a>{info[i]}</a>
         </div>
       </Link>

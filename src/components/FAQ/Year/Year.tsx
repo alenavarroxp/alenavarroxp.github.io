@@ -27,9 +27,9 @@ function Year() {
       </motion.span>
        {" "}por mi interés por la tecnología, la informática y por el papel creciente en la sociedad actual. Además la demanda laboral en
             este campo, suele ser alta y está en constante crecimiento, lo que me
-            posibilita seguir creciendo PROFESIONALMENTE.<br/> Si quieres saber más sobre mi experiencia pulsa en
+            posibilita seguir creciendo profesionalmente.<br/> Si quieres saber más sobre mi experiencia pulsa en
             <Link to={"/experiencia"}>
-                <div className="badge bg-[#02bff4] h-6 ml-1 items-center">
+                <div className="badge bg-[#02bff4] text-white h-6 ml-1 items-center">
                     Experiencia 
                     <MdWork size={18} className='ml-1'/>
                 </div>
