@@ -10,14 +10,17 @@ const events = [
     description:
       "Empecé los estudios en el grado de ingenieria informática y en el tercer curso me especialicé en la rama de ingenieria del software. Estudio en la Escuela Superior de Ingenieria Informática de la UCLM en Albacete",
     fecha: "2020 - 2024",
-    badge: "Actualmente",
+    badge: "Activo",
+    colorBadge: "#17C964",
     icon: <FaUniversity color="#02bff4" />,
   },
   {
     id: 2,
     title: "Certificación de inglés",
-    description: "Aún sin realizar",
+    description: "",
     fecha: "Fecha estimada: mediados de 2023",
+    badge: "Próximamente",
+    colorBadge: "#0072F5",
     icon: <IoIosMedal color="#02bff4" />,
   },
 ];
@@ -29,7 +32,7 @@ const MyTimeline = () => {
   return (
     <div className="mt-4 ml-4">
       <ol className="relative border-l-2 border-white ">
-        {reversedEvents.map((event,index) => (
+        {reversedEvents.map((event, index) => (
           <li key={event.id} className="mb-10 ml-8">
             <motion.span
               drag
@@ -39,27 +42,23 @@ const MyTimeline = () => {
                 left: 0,
                 right: 0,
               }}
-              dragElastic={0.01}
+              dragElastic={0.05}
               dragDirectionLock={true}
               className="absolute flex items-center justify-center w-6 h-6 bg-white rounded-full -left-3 ring-8 mt-2 ring-white"
-              whileHover={
-                draggedIndex === index // Verificar si el índice actual coincide con el índice del evento que se está arrastrando
-                  ? { scale: 1.2 }
-                  : {}
-              }
-              onDragStart={() => setDraggedIndex(index)} // Actualizar el estado del índice del evento arrastrado al iniciar el arrastre
-              onDragEnd={() => setDraggedIndex(-1)} // Limpiar el estado del índice del evento arrastrado al finalizar el arrastre
+              whileHover={draggedIndex === index ? { scale: 1.2 } : {}}
+              onDragStart={() => setDraggedIndex(index)}
+              onDragEnd={() => setDraggedIndex(-1)}
             >
-              
-    
               {event.icon}
             </motion.span>
             <h3 className="flex items-center mb-1 text-2xl font-semibold text-gray-200">
               {event.title}{" "}
               {event.badge != null && (
-                <span className="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2 py-0.5 rounded ml-3">
+                <div
+                  className={`bg-[${event.colorBadge}] text-white font-thin mr-2 px-2.5 py-3 ml-3 badge`}
+                >
                   {event.badge}
-                </span>
+                </div>
               )}
             </h3>
             <time className="block mb-2 text-sm font-normal leading-none text-gray-400">

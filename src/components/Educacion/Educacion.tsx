@@ -7,7 +7,7 @@ function Educacion() {
     <div className="lg:ml-24 md:ml-24 sm:ml-24 ml- text-4xl flex flex-col font-bold w-fit text-white mt-20">
       <div>
         <div className="w-fit">
-          Educacion
+          Educación
           <AnimatedLine />
         </div>
         <Timeline />
