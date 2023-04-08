@@ -28,7 +28,6 @@ const events = [
 const MyTimeline = () => {
   const reversedEvents = [...events].reverse(); // Hacer una copia de la matriz y luego invertirla
   const [draggedIndex, setDraggedIndex] = useState<number>(0);
-
   return (
     <div className="mt-4 ml-4">
       <ol className="relative border-l-2 border-white ">
