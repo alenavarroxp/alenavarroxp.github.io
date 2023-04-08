@@ -10,6 +10,6 @@ export const EducacionContainer = ({ variants, transition, location }: any) => (
     transition={transition}
     key={location.key}
   >
-    <Educacion />
+    <Educacion/>
   </motion.div>
 );
