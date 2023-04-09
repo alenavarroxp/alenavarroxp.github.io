@@ -5,22 +5,27 @@ import English from "../../../images/reino-unido.jpg";
 import { motion } from "framer-motion";
 
 const idiomas = [
-  { id: 0, idioma: "Español", certificacion: "Nativo", image: Spain },
+  { id: 0, idioma: "Español", certificacion: "Nativo", image: Spain,flip:false },
   {
     id: 1,
     idioma: "Inglés",
     certificacion: "B1 sin certificar",
     image: English,
+    flip:false
   },
 ];
 
 function Idiomas() {
-  const [flip, setFlip] = useState(false);
+  const [flippedIds, setFlippedIds] = useState<any>({});
 
-  function handleFlip() {
-    setFlip(!flip);
+  function handleFlip(id:any) {
+    setFlippedIds((prevIds:any) => {
+      return {
+        ...prevIds,
+        [id]: !prevIds[id]
+      };
+    });
   }
-
   return (
     <div className="">
       <div className="w-fit">
@@ -31,12 +36,13 @@ function Idiomas() {
         {idiomas.map((idioma,id) => (
           <div className="">
            
-          <motion.div
-            key={idioma.id}
-            initial={{ rotate: 0 }}
-            animate={
-              flip ? { rotateY: 180, opacity: 0 } : { rotateY: 0, opacity: 1 }
-            }
+           <motion.div
+              key={idioma.id}
+              animate={
+                flippedIds[idioma.id]
+                  ? { rotateY: 180, opacity: 0 }
+                  : { rotateY: 0, opacity: 1 }
+              }
             className="card w-80 h-fit mr-24 shadow-2xl"
             style={{ borderRadius: "3.7rem" }}
           >
@@ -62,7 +68,7 @@ function Idiomas() {
             <button
               type="button"
               className="text-gray-900 absolute bg-white border top-44 right-3 border-gray-300 focus:outline-none hover:bg-gray-200 focus:ring-2 focus:ring-[#0072F5] font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2"
-              onClick={() => handleFlip()}
+              onClick={() => handleFlip(idioma.id)}
               style={{ boxShadow: "3px 3px 3px rgba(0, 0, 0, 0.5)" }}
             >
               <div>
@@ -74,7 +80,7 @@ function Idiomas() {
               key={idioma.id}
               initial={{ rotate:0,opacity:0 }}
               animate={
-              !flip
+                !flippedIds[idioma.id]
                   ? { rotateY: 180, opacity: 0 }
                   : { rotateY: 0, opacity: 1 }
               }
@@ -98,7 +104,7 @@ function Idiomas() {
               <button
                 type="button"
                 className="text-gray-900 absolute bg-white border top-44 right-3 border-gray-300 focus:outline-none hover:bg-gray-200 focus:ring-2 focus:ring-[#0072F5] font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2"
-                onClick={() => handleFlip()}
+                onClick={() => handleFlip(idioma.id)}
                 style={{ boxShadow: "3px 3px 3px rgba(0, 0, 0, 0.5)" }}
               >
                 <div>
