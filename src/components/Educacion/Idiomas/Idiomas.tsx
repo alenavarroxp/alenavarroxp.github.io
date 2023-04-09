@@ -14,11 +14,17 @@ function Idiomas() {
         <h2>Idiomas</h2>
         <AnimatedLine />
       </div>
-      {idiomas.map((idioma) => (
-        <div key={idioma.id} className="text-base">
-          <img src={idioma.image}/>
+      <div className="flex flex-row w-fit ">
+        {idiomas.map((idioma) => (
+          <div className="card w-96  shadow-2xl">
+          <div className="card-body">
+            <h2 className="card-title">{idioma.idioma} - {idioma.certificacion}</h2>
+            <p className="text-base"></p>
+          </div>
+          <figure><img src={idioma.image} alt="" /></figure>
         </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

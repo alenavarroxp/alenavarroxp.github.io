@@ -11,7 +11,7 @@ const events = [
       "Empecé los estudios en el grado de ingenieria informática y en el tercer curso me especialicé en la rama de ingenieria del software. Estudio en la Escuela Superior de Ingenieria Informática de la UCLM en Albacete",
     fecha: "2020 - 2024",
     badge: "Activo",
-    colorBadge: "#17C964",
+    colorBadge: "#17C964", 
     icon: <FaUniversity color="#02bff4" />,
   },
   {
@@ -28,6 +28,7 @@ const events = [
 const MyTimeline = () => {
   const reversedEvents = [...events].reverse(); // Hacer una copia de la matriz y luego invertirla
   const [draggedIndex, setDraggedIndex] = useState<number>(0);
+
   return (
     <div className="mt-4 ml-4">
       <ol className="relative border-l-2 border-white ">
@@ -54,7 +55,8 @@ const MyTimeline = () => {
               {event.title}{" "}
               {event.badge != null && (
                 <div
-                  className={`bg-[${event.colorBadge}] text-white font-thin mr-2 px-2.5 py-3 ml-3 badge`}
+                className={`badge text-white font-thin mr-2 px-2.5 py-3 ml-3 `}
+                style={{backgroundColor:event.colorBadge}}
                 >
                   {event.badge}
                 </div>
