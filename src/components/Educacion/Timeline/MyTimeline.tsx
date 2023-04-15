@@ -12,7 +12,7 @@ const events = [
     fecha: "2020 - 2024",
     badge: "Activo",
     colorBadge: "#17C964", 
-    icon: <FaUniversity color="#02bff4" />,
+    icon: <FaUniversity color="#0072F5" />,
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const events = [
     fecha: "Fecha estimada: mediados de 2023",
     badge: "Próximamente",
     colorBadge: "#0072F5",
-    icon: <IoIosMedal color="#02bff4" />,
+    icon: <IoIosMedal color="#0072F5" />,
   },
 ];
 
@@ -31,7 +31,7 @@ const MyTimeline = () => {
 
   return (
     <div className="mt-4 ml-4">
-      <ol className="relative border-l-2 border-white ">
+      <ol className="relative border-l-2 border-white">
         {reversedEvents.map((event, index) => (
           <li key={event.id} className="mb-10 ml-8">
             <motion.span
