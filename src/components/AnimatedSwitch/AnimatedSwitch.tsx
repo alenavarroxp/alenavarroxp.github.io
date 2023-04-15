@@ -1,6 +1,7 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import { AboutContainer } from "./containers/AboutContainer";
 import { EducacionContainer } from "./containers/EducacionContainer";
+import { MaintenanceContainer } from "./containers/MaintenanceContainer";
 
 export const AnimatedSwitch = () => {
   const location = useLocation();
@@ -55,6 +56,36 @@ export const AnimatedSwitch = () => {
         path="educacion"
         element={
           <EducacionContainer
+            variants={variants}
+            transition={transition}
+            location={location}
+          />
+        }
+      />
+      <Route
+        path="experiencia"
+        element={
+          <MaintenanceContainer
+            variants={variants}
+            transition={transition}
+            location={location}
+          />
+        }
+      />
+      <Route
+        path="proyectos"
+        element={
+          <MaintenanceContainer
+            variants={variants}
+            transition={transition}
+            location={location}
+          />
+        }
+      />
+      <Route
+        path="contacto"
+        element={
+          <MaintenanceContainer
             variants={variants}
             transition={transition}
             location={location}
