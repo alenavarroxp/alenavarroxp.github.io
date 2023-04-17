@@ -65,7 +65,7 @@ const MyTimeline = () => {
             <time className="block mb-2 text-sm font-normal leading-none text-gray-400">
               {event.fecha}
             </time>
-            <p className="mb-4 text-base font-normal max-w-lg mr-5 text-justify text-white">
+            <p className="mb-4 text-base font-normal max-w-[19em] max-w-5 mr-8 text-justify text-white">
               {event.description}
             </p>
           </li>
