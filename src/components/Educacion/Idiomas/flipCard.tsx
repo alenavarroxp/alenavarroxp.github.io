@@ -20,7 +20,7 @@ const Card: React.FC<FlipCardProps> = ({ idioma, id }) => {
     });
   }
   return (
-    <div className="relative" style={{ perspective: 1000 }}>
+    <div className="relative mb-4 mt-4" style={{ perspective: 1000 }}>
       <motion.div
         key={idioma.id}
         animate={

@@ -32,7 +32,7 @@ function Idiomas() {
         <h2>Idiomas</h2>
         <AnimatedLine />
       </div>
-      <div className="flex flex-row">
+      <div className="flex md:flex-row lg:flex-row flex-col"> 
         {idiomas.map((idioma, id) => (
           <Card idioma={idioma} id={id}/>
         ))}
