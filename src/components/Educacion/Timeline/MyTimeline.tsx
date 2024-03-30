@@ -17,9 +17,9 @@ const events = [
   {
     id: 2,
     title: "Certificación de inglés",
-    description: "",
-    fecha: "Fecha estimada: mediados de 2023",
-    badge: "Próximamente",
+    description: "Certificación Linguaskill de nivel B1 de inglés por la Universidad de Cambridge. Para ver la certificación, click <a href='https://drive.google.com/file/d/1GXpRImxRP-L64kXAq4s1_-KDzb1kBheg/view?usp=sharings'>aquí</a>",
+    fecha: "Marzo 2024",
+    badge: "Finalizado",
     colorBadge: "#0072F5",
     icon: <IoIosMedal color="#0072F5" />,
   },
@@ -65,9 +65,9 @@ const MyTimeline = () => {
             <time className="block mb-2 text-sm font-normal leading-none text-gray-400">
               {event.fecha}
             </time>
-            <p className="mb-4 text-base font-normal max-w-[19em] max-w-5 mr-8 text-justify text-white">
-              {event.description}
-            </p>
+            <p className="mb-4 text-base font-normal max-w-[19em] max-w-5 mr-8 text-justify text-white"
+              dangerouslySetInnerHTML={{ __html: event.description }}
+            ></p>
           </li>
         ))}
       </ol>

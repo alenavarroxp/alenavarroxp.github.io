@@ -17,7 +17,7 @@ const idiomas = [
   {
     id: 1,
     idioma: "Inglés",
-    certificacion: "B1 sin certificar",
+    certificacion: "B1 certificado",
     image: English,
     flip: false,
     description:"Tengo un nivel intermedio para comunicarme y entender conversaciones sencillas, aunque todavía tengo limitaciones en mi vocabulario y gramática.",
